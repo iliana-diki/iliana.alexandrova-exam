@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build Test Deploy
 
 on:
   push:
@@ -51,7 +51,7 @@ jobs:
           cache: 'npm'
       - name: Install node modules
         run: npm install
-      - name: Install Playewright
+      - name: Install Playwright
         run: npx playwright install 
       - name: Run ui tests
         run: npm run test:ui
